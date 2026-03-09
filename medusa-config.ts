@@ -4,7 +4,7 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   admin: {
-    disable: process.env.DISABLE_ADMIN === 'true',
+    disable: true,
   },
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
