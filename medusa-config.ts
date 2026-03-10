@@ -4,7 +4,7 @@ loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
   admin: {
-    disable: true,
+    disable: process.env.DISABLE_ADMIN === 'true',
     backendUrl: process.env.MEDUSA_BACKEND_URL || "https://ellel-oversize.onrender.com",
   },
   projectConfig: {
